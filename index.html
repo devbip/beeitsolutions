@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JewelHub | Jewelry Shop Management Software in Nepal</title>
+    <meta
+      name="description"
+      content="JewelHub is a modern jewelry shop management software for Nepal, helping jewelers manage inventory, billing, karigar work, customer ledgers, reports, rates, and branches."
+    />
+    <meta name="author" content="Biplob Devkota" />
+    <meta name="theme-color" content="#0d0f14" />
+
+    <meta property="og:title" content="JewelHub | Jewelry Shop Management Software" />
+    <meta
+      property="og:description"
+      content="Nepal's smart jewelry management platform for inventory, billing, karigar work, customer ledgers, analytics, and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jewelhub.example.com/" />
+    <meta property="og:image" content="https://jewelhub.example.com/og-placeholder.jpg" />
+
+    <!-- TODO: Replace favicon placeholder with final JewelHub brand icon. -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0f14'/%3E%3Cpath d='M18 20h28l7 10-21 20L11 30z' fill='%23d4af37'/%3E%3Cpath d='M18 20l14 30 14-30M11 30h42' fill='none' stroke='%23fff7d7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#hero" aria-label="JewelHub home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="img">
+              <path d="M8 9h16l4 7-12 11L4 16z" />
+              <path d="M8 9l8 18 8-18M4 16h24" />
+            </svg>
+          </span>
+          <span>JewelHub</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" data-nav-menu>
+          <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
+          <a href="#about">About</a>
+          <a href="#team">Team</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+          <a class="button button-small button-primary" href="#contact">Request Demo</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Built for jewelry retailers in Nepal</p>
+            <h1>Nepal's Smartest Jewelry Shop Management Software</h1>
+            <p class="hero-subtitle">
+              A complete jewellery software for inventory management, billing, sales tracking, Kaligadh tracking, and everyday shop operations.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Get Started</a>
+              <a class="button button-secondary" href="#demo">View Demo</a>
+            </div>
+            <dl class="hero-metrics" aria-label="JewelHub highlights">
+              <div>
+                <dt>99.9%</dt>
+                <dd>Cloud-ready uptime goal</dd>
+              </div>
+              <div>
+                <dt>24/7</dt>
+                <dd>Access from any device</dd>
+              </div>
+              <div>
+                <dt>NPR</dt>
+                <dd>Local billing workflows</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="JewelHub dashboard preview">
+            <!-- TODO: Replace mockup with a real JewelHub product screenshot. -->
+            <div class="dashboard-mockup" role="img" aria-label="Placeholder dashboard interface showing sales, inventory, and rate cards">
+              <div class="mockup-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>JewelHub Dashboard</strong>
+              </div>
+              <div class="mockup-body">
+                <aside class="mockup-sidebar" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </aside>
+                <div class="mockup-main">
+                  <div class="mockup-card wide">
+                    <p>Today's Sales</p>
+                    <strong>NPR 285,000</strong>
+                    <span class="sparkline"></span>
+                  </div>
+                  <div class="mockup-card">
+                    <p>Gold Rate</p>
+                    <strong>Rs. --</strong>
+                  </div>
+                  <div class="mockup-card">
+                    <p>Pending Karigar</p>
+                    <strong>18 Jobs</strong>
+                  </div>
+                  <div class="mockup-table">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Core features</p>
+            <h2>Everything a jewelry business needs to run cleanly</h2>
+            <p>From day-to-day billing to secure multi-store reporting, JewelHub keeps high-value operations visible, traceable, and easy to manage.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 7h16v13H4z"/><path d="M4 7l3-4h10l3 4M9 11h6"/></svg>
+              </span>
+              <h3>Inventory Management</h3>
+              <p>Manage gold, diamond, silver, stones, categories, weights, and item movement with reliable stock visibility.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 3h10v18l-2-1-2 1-2-1-2 1-2-1z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+              </span>
+              <h3>Billing & Invoicing</h3>
+              <p>Create fast, accurate bills with GST/VAT-ready workflows, making charges, discounts, and payment records.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-5M12 16V8M16 16v-8M20 16v-3"/></svg>
+              </span>
+              <h3>Sales Tracking</h3>
+              <p>Track daily sales, customer history, shop performance, and counter activity from one dashboard.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 19h10"/><path d="M9 19V9l3-5 3 5v10"/><path d="M7 12h10"/></svg>
+              </span>
+              <h3>Kaligadh Tracking</h3>
+              <p>Monitor gold melting, refining, purity process, issued materials, and received balances with clarity.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M14 7l3 3-8 8H6v-3z"/><path d="M15 6l2-2 3 3-2 2M4 21h16"/></svg>
+              </span>
+              <h3>Karigar Management</h3>
+              <p>Track artisan work, wages, job-work, pending balances, delivery timelines, and workflow efficiency.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 6h15l-2 8H8z"/><path d="M6 6 5 3H2"/><path d="M8 18h.01M18 18h.01"/></svg>
+              </span>
+              <h3>Purchase Management</h3>
+              <p>Track purchases, suppliers, costs, purchase source, and inventory impact from one organized workflow.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-5M12 16V8M16 16v-8M20 16v-3"/></svg>
+              </span>
+              <h3>Reports & Analytics</h3>
+              <p>Get real-time insights, business reports, sales summaries, purchases, dues, and performance trends.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7z"/><path d="M9 12l2 2 4-5"/></svg>
+              </span>
+              <h3>Data Security</h3>
+              <p>Protect business records with secure cloud backup, user access control, and reliable data handling.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14"/><path d="M9 21v-7h6v7M4 11h16"/></svg>
+              </span>
+              <h3>Multi-Store Management</h3>
+              <p>Manage multiple branches, users, stock, counters, and reports from one connected dashboard.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+              </span>
+              <h3>Web Based Software</h3>
+              <p>Access JewelHub from anywhere with no installation required and a responsive mobile-friendly interface.</p>
+            </article>
+          </div>
+
+          <div class="benefit-strip reveal" aria-label="JewelHub trust and service highlights">
+            <div>
+              <strong>24/7 Support</strong>
+              <span>Always here to support your business</span>
+            </div>
+            <div>
+              <strong>Free Implementation & Training</strong>
+              <span>Setup guidance and onboarding for clients</span>
+            </div>
+            <div>
+              <strong>Secure, Reliable & Easy to Use</strong>
+              <span>Built for everyday jewellery operations</span>
+            </div>
+            <div>
+              <strong>Trusted by Jewellers Across Nepal</strong>
+              <span>Designed around local shop workflows</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section demo-section" id="demo">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Screenshots & demo</p>
+            <h2>A clear view of shop operations</h2>
+            <p>Preview key screens while real product screenshots are being prepared.</p>
+          </div>
+
+          <div class="demo-tabs reveal">
+            <div class="tab-list" role="tablist" aria-label="JewelHub screenshot previews">
+              <button class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="panel-dashboard" id="tab-dashboard" data-tab="dashboard">Dashboard</button>
+              <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-billing" id="tab-billing" data-tab="billing">Billing</button>
+              <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-reports" id="tab-reports" data-tab="reports">Reports</button>
+            </div>
+
+            <!-- TODO: Replace styled placeholders below with real screenshots. -->
+            <div class="screenshot-panel active" role="tabpanel" id="panel-dashboard" aria-labelledby="tab-dashboard" data-panel="dashboard">
+              <div class="screenshot-placeholder">
+                <span>Dashboard Overview</span>
+                <p>Sales, inventory, rates, and pending work summary</p>
+              </div>
+            </div>
+            <div class="screenshot-panel" role="tabpanel" id="panel-billing" aria-labelledby="tab-billing" data-panel="billing" hidden>
+              <div class="screenshot-placeholder billing">
+                <span>Billing Screen</span>
+                <p>Fast invoice flow with customer and item details</p>
+              </div>
+            </div>
+            <div class="screenshot-panel" role="tabpanel" id="panel-reports" aria-labelledby="tab-reports" data-panel="reports" hidden>
+              <div class="screenshot-placeholder reports">
+                <span>Reports & Analytics</span>
+                <p>Branch performance, dues, stock value, and trends</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="section-heading align-left reveal">
+            <p class="eyebrow">About Jewel Hub</p>
+            <h2>Modernizing jewelry retail for Nepal</h2>
+            <p>
+              JewelHub is a jewelry shop management software product by Biplob Devkota, created to help Nepali jewelers move from manual registers and scattered spreadsheets to a reliable digital operating system.
+            </p>
+            <p>
+              The mission is simple: make high-value retail workflows easier to track, faster to operate, and clearer for owners, staff, karigars, and customers.
+            </p>
+          </div>
+
+          <div class="stat-grid reveal" aria-label="Company statistics">
+            <!-- TODO: Replace placeholder stats with verified production numbers. -->
+            <div class="stat-card">
+              <strong>X+</strong>
+              <span>Shops served</span>
+            </div>
+            <div class="stat-card">
+              <strong>Y+</strong>
+              <span>Transactions processed</span>
+            </div>
+            <div class="stat-card">
+              <strong>Z+</strong>
+              <span>Inventory items tracked</span>
+            </div>
+            <div class="stat-card">
+              <strong>2026</strong>
+              <span>Built for scale</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section team-section" id="team">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Team</p>
+            <h2>Built by people who understand local business workflows</h2>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card reveal">
+              <!-- TODO: Replace photo placeholder with Biplob Devkota's professional photo. -->
+              <div class="photo-placeholder" role="img" aria-label="Photo placeholder for Biplob Devkota">BD</div>
+              <h3>Biplob Devkota</h3>
+              <p>Founder & Developer</p>
+            </article>
+            <article class="team-card reveal">
+              <!-- TODO: Replace with actual team member photo, name, and role. -->
+              <div class="photo-placeholder" role="img" aria-label="Team member photo placeholder">TM</div>
+              <h3>Team Member</h3>
+              <p>Product & Support</p>
+            </article>
+            <article class="team-card reveal">
+              <!-- TODO: Replace with actual team member photo, name, and role. -->
+              <div class="photo-placeholder" role="img" aria-label="Team member photo placeholder">TM</div>
+              <h3>Team Member</h3>
+              <p>Implementation Specialist</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing-section" id="pricing">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Pricing</p>
+            <h2>Plans for growing jewelry shops</h2>
+            <p>Choose a starting point and customize features around your shop size, branches, and workflow needs.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="pricing-card reveal">
+              <h3>Starter</h3>
+              <p class="price">Contact for pricing</p>
+              <!-- TODO: Replace placeholder pricing after packages are finalized. -->
+              <ul>
+                <li>Inventory management</li>
+                <li>Basic billing</li>
+                <li>Customer ledger</li>
+                <li>Email support</li>
+              </ul>
+              <a class="button button-secondary" href="#contact">Request Quote</a>
+            </article>
+            <article class="pricing-card featured reveal">
+              <p class="plan-badge">Popular</p>
+              <h3>Professional</h3>
+              <p class="price">Contact for pricing</p>
+              <!-- TODO: Replace placeholder pricing after packages are finalized. -->
+              <ul>
+                <li>Everything in Starter</li>
+                <li>Karigar management</li>
+                <li>Reports & analytics</li>
+                <li>Rate tracking</li>
+                <li>Priority support</li>
+              </ul>
+              <a class="button button-primary" href="#contact">Request Demo</a>
+            </article>
+            <article class="pricing-card reveal">
+              <h3>Enterprise</h3>
+              <p class="price">Contact for pricing</p>
+              <!-- TODO: Replace placeholder pricing after packages are finalized. -->
+              <ul>
+                <li>Multi-branch setup</li>
+                <li>Role-based access</li>
+                <li>Custom reporting</li>
+                <li>Migration assistance</li>
+              </ul>
+              <a class="button button-secondary" href="#contact">Talk to Sales</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="section-heading align-left reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Request a JewelHub demo</h2>
+            <p>Share a few details and the JewelHub team will get back to you with the right setup for your shop.</p>
+
+            <address class="contact-info">
+              <a href="mailto:main.jewelhub@gmail.com">main.jewelhub@gmail.com</a>
+              <a href="mailto:main.beeitsolutions@gmail.com">main.beeitsolutions@gmail.com</a>
+              <a href="tel:+9779825157916">Support: +977 9825157916</a>
+              <a href="tel:+9779816613136">Marketing: +977 9816613136</a>
+              <a href="tel:+9779844900179">Technology: +977 9844900179</a>
+              <span>Pokhara, Nepal</span>
+              <a href="https://biplobdevkota.com.np/" target="_blank" rel="noopener">biplobdevkota.com.np</a>
+            </address>
+          </div>
+
+          <!-- TODO: Wire this form to Formspree, Cloudflare Pages Functions, or another form service before production launch. -->
+          <form class="contact-form reveal" novalidate data-contact-form>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required minlength="2" />
+              <small class="error-message" data-error-for="name"></small>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <small class="error-message" data-error-for="email"></small>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="^[0-9+\-\s()]{7,20}$" />
+              <small class="error-message" data-error-for="phone"></small>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+              <small class="error-message" data-error-for="message"></small>
+            </div>
+            <button class="button button-primary" type="submit">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand" href="#hero" aria-label="JewelHub home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="img">
+              <path d="M8 9h16l4 7-12 11L4 16z" />
+              <path d="M8 9l8 18 8-18M4 16h24" />
+            </svg>
+          </span>
+          <span>JewelHub</span>
+        </a>
+
+        <div class="footer-links" aria-label="Footer quick links">
+          <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="social-links" aria-label="Social links">
+          <!-- TODO: Replace social placeholders with real JewelHub profiles. -->
+          <a href="#" aria-label="Facebook profile placeholder">Fb</a>
+          <a href="#" aria-label="LinkedIn profile placeholder">In</a>
+          <a href="#" aria-label="YouTube profile placeholder">Yt</a>
+        </div>
+      </div>
+      <div class="container copyright">
+        <p>© 2026 Jewel Hub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
