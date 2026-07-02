@@ -5,6 +5,10 @@ const tabButtons = document.querySelectorAll("[data-tab]");
 const tabPanels = document.querySelectorAll("[data-panel]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
+const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+const countElements = document.querySelectorAll("[data-count]");
+let tabRotationTimer;
+let hasInteractedWithTabs = false;
 
 function setHeaderState() {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -49,22 +53,97 @@ document.querySelectorAll(".reveal").forEach((element) => {
   revealObserver.observe(element);
 });
 
+function animateCount(element) {
+  const target = Number(element.dataset.count);
+  const suffix = element.dataset.suffix || "+";
+  const duration = 950;
+  const startTime = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.round(target * eased);
+    element.textContent = `${value}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+const countObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      animateCount(entry.target);
+      countObserver.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.45 }
+);
+
+countElements.forEach((element) => {
+  countObserver.observe(element);
+});
+
+function activateTab(button) {
+  const selectedTab = button.dataset.tab;
+
+  tabButtons.forEach((tabButton) => {
+    const isActive = tabButton === button;
+    tabButton.classList.toggle("active", isActive);
+    tabButton.setAttribute("aria-selected", String(isActive));
+  });
+
+  tabPanels.forEach((panel) => {
+    const isActive = panel.dataset.panel === selectedTab;
+    panel.classList.toggle("active", isActive);
+    panel.hidden = !isActive;
+  });
+}
+
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const selectedTab = button.dataset.tab;
-
-    tabButtons.forEach((tabButton) => {
-      const isActive = tabButton === button;
-      tabButton.classList.toggle("active", isActive);
-      tabButton.setAttribute("aria-selected", String(isActive));
-    });
-
-    tabPanels.forEach((panel) => {
-      const isActive = panel.dataset.panel === selectedTab;
-      panel.classList.toggle("active", isActive);
-      panel.hidden = !isActive;
-    });
+    hasInteractedWithTabs = true;
+    clearInterval(tabRotationTimer);
+    activateTab(button);
   });
+});
+
+if (tabButtons.length > 1) {
+  tabRotationTimer = setInterval(() => {
+    if (hasInteractedWithTabs) {
+      return;
+    }
+
+    const activeIndex = Array.from(tabButtons).findIndex((button) => button.classList.contains("active"));
+    const nextButton = tabButtons[(activeIndex + 1) % tabButtons.length];
+    activateTab(nextButton);
+  }, 5000);
+}
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+      });
+    });
+  },
+  { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+);
+
+document.querySelectorAll("main section[id]").forEach((section) => {
+  sectionObserver.observe(section);
 });
 
 function setError(field, message) {
