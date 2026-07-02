@@ -532,15 +532,6 @@ textarea {
   box-shadow: var(--shadow);
 }
 
-.product-logo {
-  width: min(100%, 20rem);
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  justify-self: center;
-  border-radius: var(--radius);
-  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
-}
-
 .project-label {
   width: fit-content;
   margin: 0;
@@ -716,6 +707,20 @@ textarea {
   border-color: rgba(212, 175, 55, 0.42);
   background: rgba(212, 175, 55, 0.12);
   color: var(--text);
+}
+
+.screenshot-frame {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: var(--radius);
+  background: #090909;
+  box-shadow: 0 24px 70px -42px rgba(0, 0, 0, 0.9);
+}
+
+.product-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .app-preview {
@@ -1007,17 +1012,23 @@ textarea {
   padding: 1.25rem;
 }
 
-.member-badge {
+.member-photo {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
+  aspect-ratio: 4 / 3.5;
+  display: block;
+  object-fit: cover;
+  object-position: center 24%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
   background: linear-gradient(145deg, rgba(212, 175, 55, 0.16), rgba(36, 198, 163, 0.08));
-  color: var(--gold-soft);
-  font-size: 2rem;
-  font-weight: 800;
+}
+
+.team-card:nth-child(2) .member-photo {
+  object-position: center 18%;
+}
+
+.team-card:nth-child(3) .member-photo {
+  object-position: center 22%;
 }
 
 .pricing-card {
