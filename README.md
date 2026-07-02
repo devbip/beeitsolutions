@@ -1,10 +1,10 @@
-# JewelHub Static Website
+# BEE IT Solutions Static Website
 
-Professional single-page marketing/portfolio website for JewelHub, a jewelry shop management software product by Biplob Devkota.
+Professional single-page company website for BEE IT Solutions, featuring Jewel Hub as the team's showcased jewelry shop management software project.
 
 ## Files
 
-- `index.html` - semantic single-page website content
+- `index.html` - semantic single-page website content for the company and Jewel Hub project
 - `style.css` - responsive dark theme, layout, animations, and UI styling
 - `script.js` - mobile nav, scroll reveal, demo tabs, and client-side form validation
 - `_headers` - optional Cloudflare Pages headers
@@ -23,7 +23,7 @@ Professional single-page marketing/portfolio website for JewelHub, a jewelry sho
 
 ## Before Production
 
-- Replace placeholder logo/favicon and Open Graph image.
-- Replace screenshot placeholders in the demo section with real product screenshots.
-- Replace placeholder pricing, team photos, stats, email, and phone number.
+- Add final Open Graph image and canonical URL metadata.
+- Replace styled demo previews with real Jewel Hub product screenshots when available.
+- Replace contact-for-pricing copy when packages are finalized.
 - Wire the contact form to Formspree, Cloudflare Pages Functions, or another form service.
