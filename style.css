@@ -995,38 +995,8 @@ textarea {
   flex-direction: column;
 }
 
-.member-photo-wrap {
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 4 / 4.5;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius);
-  background: linear-gradient(145deg, rgba(212, 175, 55, 0.16), rgba(36, 198, 163, 0.08));
-}
-
-.member-photo {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center 24%;
-  transition: transform 280ms ease;
-}
-
-.team-card:hover .member-photo {
-  transform: scale(1.035);
-}
-
-.team-card:nth-child(2) .member-photo {
-  object-position: center 16%;
-}
-
-.team-card:nth-child(3) .member-photo {
-  object-position: 43% 36%;
-}
-
 .team-card h3 {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .pricing-card {
