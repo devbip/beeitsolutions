@@ -19,7 +19,7 @@
   --shadow-soft: 0 18px 54px rgba(0, 0, 0, 0.22);
   --radius: 10px;
   --radius-lg: 14px;
-  --header-height: 74px;
+  --header-height: 72px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -120,12 +120,12 @@ textarea {
 }
 
 .container {
-  width: min(1160px, calc(100% - 2.5rem));
+  width: min(1280px, calc(100% - 3rem));
   margin-inline: auto;
 }
 
 .section {
-  padding: clamp(4.75rem, 7vw, 7.25rem) 0;
+  padding: 7.5rem 0;
   scroll-margin-top: var(--header-height);
 }
 
@@ -150,20 +150,22 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(1rem, 2.5vw, 2rem);
+  gap: 3rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  flex: 0 0 auto;
-  max-width: min(34vw, 14.75rem);
-  padding: 0.24rem 0;
+  flex: 0 0 20%;
+  max-width: 16rem;
+  min-width: 12.25rem;
+  padding: 0;
 }
 
 .brand-logo {
-  width: 100%;
-  height: 2.42rem;
+  width: auto;
+  height: 3.1rem;
+  max-height: 3.5rem;
   object-fit: contain;
   object-position: left center;
   image-rendering: auto;
@@ -173,15 +175,16 @@ textarea {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: clamp(0.35rem, 0.85vw, 0.72rem);
+  gap: 2rem;
+  margin-left: auto;
 }
 
 .nav-menu a:not(.button) {
   color: var(--muted);
-  padding: 0.52rem 0.38rem;
+  padding: 0.5rem 0;
   border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 650;
   line-height: 1;
   letter-spacing: 0.01em;
   transition: color 220ms var(--ease), background 220ms var(--ease);
@@ -228,10 +231,10 @@ textarea {
   align-items: center;
   justify-content: center;
   min-height: 3rem;
-  padding: 0.82rem 1.18rem;
+  padding: 0.84rem 1.25rem;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  font-size: 0.91rem;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
@@ -267,20 +270,20 @@ textarea {
 }
 
 .button-small {
-  min-height: 2.42rem;
-  padding: 0.64rem 0.92rem;
-  font-size: 0.84rem;
+  min-height: 2.75rem;
+  padding: 0.72rem 1rem;
+  font-size: 0.94rem;
 }
 
 .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: calc(90vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
-  padding-top: clamp(3.8rem, 6vw, 5.8rem);
-  padding-bottom: clamp(4.25rem, 7vw, 6.4rem);
+  padding-top: 6rem;
+  padding-bottom: 7.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   background:
     linear-gradient(100deg, rgba(8, 9, 13, 0.96) 0%, rgba(8, 9, 13, 0.86) 48%, rgba(8, 9, 13, 0.62) 100%),
@@ -323,20 +326,24 @@ textarea {
 }
 
 .hero-grid {
-  gap: clamp(2.75rem, 6vw, 5.7rem);
+  gap: clamp(4rem, 7vw, 6rem);
+}
+
+.hero-copy {
+  max-width: 37.5rem;
 }
 
 .hero h1,
 .section-heading h2 {
   margin: 0;
   letter-spacing: 0;
-  line-height: 1.03;
+  line-height: 1.05;
 }
 
 .hero h1 {
-  max-width: 15ch;
+  max-width: 37.5rem;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.9rem, 5.8vw, 5.15rem);
+  font-size: 4rem;
   font-weight: 700;
 }
 
@@ -357,11 +364,11 @@ textarea {
 }
 
 .hero-subtitle {
-  max-width: 37rem;
-  margin: 1.2rem 0 0;
+  max-width: 32.5rem;
+  margin: 1.5rem 0 0;
   color: var(--muted);
-  font-size: clamp(1rem, 1.35vw, 1.12rem);
-  line-height: 1.72;
+  font-size: 1.25rem;
+  line-height: 1.7;
 }
 
 .eyebrow {
@@ -377,14 +384,14 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 1.8rem;
+  margin-top: 2rem;
 }
 
 .hero-metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
-  margin: 1.8rem 0 0;
+  margin: 2rem 0 0;
 }
 
 .hero-metrics div {
@@ -414,6 +421,8 @@ textarea {
 
 .hero-visual {
   position: relative;
+  justify-self: end;
+  width: min(100%, 49rem);
 }
 
 .hero-visual::before {
@@ -430,11 +439,13 @@ textarea {
 
 .hero-screen {
   position: relative;
+  width: min(108%, 56rem);
+  margin-left: auto;
   overflow: hidden;
   border: 1px solid rgba(212, 175, 55, 0.18);
-  border-radius: var(--radius-lg);
+  border-radius: 1rem;
   background: #050608;
-  box-shadow: 0 38px 110px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 42px 120px rgba(0, 0, 0, 0.42), 0 16px 48px rgba(0, 0, 0, 0.28);
   transform: perspective(1100px) rotateY(-3.5deg) rotateX(1.2deg) translateY(0);
   transition: transform 320ms var(--ease), box-shadow 320ms var(--ease), border-color 320ms var(--ease);
 }
@@ -494,7 +505,7 @@ textarea {
 
 .section-heading {
   max-width: 42rem;
-  margin: 0 auto clamp(2.25rem, 4vw, 2.85rem);
+  margin: 0 auto 3.5rem;
   text-align: center;
 }
 
@@ -505,16 +516,16 @@ textarea {
 
 .section-heading h2 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.24rem, 4.4vw, 3.62rem);
+  font-size: clamp(2.25rem, 3.8vw, 3.25rem);
   font-weight: 700;
 }
 
 .section-heading p:not(.eyebrow) {
-  max-width: 40rem;
-  margin: 1rem auto 0;
+  max-width: 32.5rem;
+  margin: 1.25rem auto 0;
   color: var(--muted);
-  font-size: 0.98rem;
-  line-height: 1.74;
+  font-size: 1.25rem;
+  line-height: 1.7;
 }
 
 .section-heading.align-left p:not(.eyebrow) {
@@ -522,7 +533,7 @@ textarea {
 }
 
 .project-section {
-  padding-top: clamp(4.5rem, 6.5vw, 6.4rem);
+  padding-top: 7.5rem;
 }
 
 .project-showcase {
@@ -620,7 +631,7 @@ textarea {
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  gap: clamp(1rem, 2vw, 1.35rem);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
 }
 
 .feature-card,
@@ -692,7 +703,7 @@ textarea {
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1px;
   overflow: hidden;
-  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  margin-top: 2.5rem;
   border: 1px solid var(--gold-line);
   border-radius: var(--radius-lg);
   background: var(--gold-line);
@@ -730,15 +741,15 @@ textarea {
   background:
     linear-gradient(135deg, rgba(212, 175, 55, 0.06), transparent 34%),
     var(--surface);
-  padding: clamp(0.85rem, 2vw, 1.15rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
   box-shadow: var(--shadow);
 }
 
 .tab-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.65rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .tab-button {
@@ -1307,7 +1318,10 @@ textarea:focus {
 }
 
 @media (min-width: 760px) {
-  .hero-grid,
+  .hero-grid {
+    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+  }
+
   .about-grid,
   .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1326,7 +1340,7 @@ textarea:focus {
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
   .nav-toggle {
     display: inline-grid;
   }
@@ -1361,50 +1375,71 @@ textarea:focus {
   }
 }
 
-@media (max-width: 640px) {
-  .container {
-    width: min(100% - 1.25rem, 1120px);
-  }
-
-  .brand {
-    max-width: min(56vw, 12rem);
-    padding-block: 0.18rem;
-  }
-
-  .brand-logo {
-    height: 2.08rem;
-  }
-
-  .section {
-    padding: 3.85rem 0;
-  }
-
-  .hero {
-    min-height: auto;
-    padding-top: 3.65rem;
-    padding-bottom: 4.15rem;
-  }
-
+@media (max-width: 1080px) {
   .hero h1 {
-    max-width: 12.5ch;
-    font-size: clamp(2.65rem, 12.5vw, 3.55rem);
-    line-height: 1;
-  }
-
-  .section-heading {
-    margin-bottom: 2.1rem;
-  }
-
-  .section-heading h2 {
-    font-size: clamp(2.05rem, 10vw, 2.85rem);
+    max-width: 37.5rem;
+    font-size: 3rem;
   }
 
   .hero-subtitle,
   .section-heading p:not(.eyebrow) {
-    line-height: 1.68;
+    font-size: 1.16rem;
   }
 
   .hero-screen {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 1.25rem, 1280px);
+  }
+
+  .brand {
+    flex-basis: auto;
+    min-width: 0;
+    max-width: min(58vw, 12rem);
+  }
+
+  .brand-logo {
+    height: 2.25rem;
+    max-height: 3.5rem;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero h1 {
+    max-width: 37.5rem;
+    font-size: 2.25rem;
+    line-height: 1.05;
+  }
+
+  .section-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2rem, 9vw, 2.45rem);
+  }
+
+  .hero-subtitle,
+  .section-heading p:not(.eyebrow) {
+    max-width: 32.5rem;
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .hero-screen {
+    width: 100%;
     transform: none;
   }
 
