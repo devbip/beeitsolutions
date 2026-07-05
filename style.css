@@ -163,9 +163,9 @@ textarea {
 }
 
 .brand-logo {
-  width: auto;
-  height: 3.1rem;
-  max-height: 3.5rem;
+  display: block;
+  width: min(100%, 11.25rem);
+  height: auto;
   object-fit: contain;
   object-position: left center;
   image-rendering: auto;
@@ -1253,7 +1253,7 @@ textarea:focus {
 }
 
 .footer-logo {
-  height: clamp(3.4rem, 7vw, 4.8rem);
+  width: min(100%, 17.25rem);
 }
 
 .footer-links,
@@ -1403,8 +1403,7 @@ textarea:focus {
   }
 
   .brand-logo {
-    height: 2.25rem;
-    max-height: 3.5rem;
+    width: min(58vw, 11rem);
   }
 
   .section {
@@ -1527,7 +1526,7 @@ textarea:focus {
   }
 
   .footer-logo {
-    height: 3.2rem;
+    width: min(100%, 17rem);
     object-position: center;
   }
 }
