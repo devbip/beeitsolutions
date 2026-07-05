@@ -164,7 +164,7 @@ textarea {
 
 .brand-logo {
   display: block;
-  width: min(100%, 11.25rem);
+  width: min(100%, 10.75rem);
   height: auto;
   object-fit: contain;
   object-position: left center;
@@ -1403,7 +1403,7 @@ textarea:focus {
   }
 
   .brand-logo {
-    width: min(58vw, 11rem);
+    width: min(58vw, 10.5rem);
   }
 
   .section {
