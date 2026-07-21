@@ -402,8 +402,17 @@
             </address>
           </div>
 
-          <!-- TODO: Wire this form to Formspree, Cloudflare Pages Functions, or another form service before production launch. -->
-          <form class="contact-form reveal" novalidate data-contact-form>
+          <form
+            class="contact-form reveal"
+            action="https://formsubmit.co/main.jewelhub@gmail.com"
+            method="POST"
+            novalidate
+            data-contact-form
+          >
+            <input type="hidden" name="_subject" value="New Jewel Hub demo request" />
+            <input type="hidden" name="_cc" value="main.beeitsolutions@gmail.com" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
             <div class="form-field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required minlength="2" />

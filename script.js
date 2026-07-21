@@ -173,10 +173,11 @@ function validateField(field) {
   return "";
 }
 
-contactForm?.addEventListener("submit", (event) => {
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const fields = Array.from(contactForm.querySelectorAll("input, textarea"));
+  const fields = Array.from(contactForm.querySelectorAll("input:not([type='hidden']):not([hidden]), textarea"));
+  const submitButton = contactForm.querySelector("button[type='submit']");
   let hasError = false;
 
   fields.forEach((field) => {
@@ -191,9 +192,38 @@ contactForm?.addEventListener("submit", (event) => {
     return;
   }
 
-  // TODO: Replace this client-side success state with a real form submission endpoint.
-  formStatus.textContent = "Thanks. Your demo request is ready to be sent once the form service is connected.";
-  contactForm.reset();
+  const formData = new FormData(contactForm);
+  const endpoint = contactForm.getAttribute("action")?.replace("https://formsubmit.co/", "https://formsubmit.co/ajax/");
+
+  if (!endpoint) {
+    formStatus.textContent = "Sorry, the request could not be sent. Please email main.jewelhub@gmail.com directly.";
+    return;
+  }
+
+  formStatus.textContent = "Sending your demo request...";
+  submitButton?.setAttribute("disabled", "true");
+
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(Object.fromEntries(formData.entries())),
+    });
+
+    if (!response.ok) {
+      throw new Error("Form submission failed.");
+    }
+
+    formStatus.textContent = "Thanks. Your demo request has been sent.";
+    contactForm.reset();
+  } catch (error) {
+    formStatus.textContent = "Sorry, the request could not be sent. Please email main.jewelhub@gmail.com directly.";
+  } finally {
+    submitButton?.removeAttribute("disabled");
+  }
 });
 
 contactForm?.addEventListener("input", (event) => {

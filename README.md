@@ -26,4 +26,4 @@ Professional single-page company website for BEE IT Solutions, featuring Jewel H
 - Add final Open Graph image and canonical URL metadata.
 - Replace styled demo previews with real Jewel Hub product screenshots when available.
 - Replace contact-for-pricing copy when packages are finalized.
-- Wire the contact form to Formspree, Cloudflare Pages Functions, or another form service.
+- Confirm the FormSubmit activation email for `main.jewelhub@gmail.com` after the first live demo request.
